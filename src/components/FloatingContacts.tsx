@@ -5,9 +5,9 @@ const FloatingContacts = () => {
   return (
     <div className="floating-contacts">
       <a
-        href="https://wa.me/01145188254"
+        href="https://wa.me/201145188254"
         className="floating-btn whatsapp-btn"
-        title="واتساب: 01145188254"
+        title="واتساب: 201145188254"
       >
         <i className="fab fa-whatsapp"></i>
       </a>
