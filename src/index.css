@@ -103,12 +103,11 @@ All colors MUST be HSL.
   }
 }
 
-/* Floating Contact Buttons */
+/* Floating Contact Buttons - moved to bottom right */
 .floating-contacts {
   position: fixed;
   right: 20px;
-  top: 50%;
-  transform: translateY(-50%);
+  bottom: 20px;
   z-index: 1000;
   display: flex;
   flex-direction: column;
@@ -168,19 +167,10 @@ All colors MUST be HSL.
   letter-spacing: 0.5px;
 }
 
-/* Medical cross animation */
-.medical-cross {
-  animation: rotate-medical 10s linear infinite;
-}
-
-@keyframes rotate-medical {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
-}
-
 @media (max-width: 768px) {
   .floating-contacts {
     right: 15px;
+    bottom: 15px;
     gap: 10px;
   }
   
