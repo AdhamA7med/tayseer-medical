@@ -1,8 +1,15 @@
-
 import React from 'react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import FloatingContacts from '../components/FloatingContacts';
+
+// استيراد الصور من مجلد src/images
+import oxygenDevice from '../images/جهاز أكسجين.webp';
+import nebulizer from '../images/جهاز نوبليزر.webp';
+import vacuumDevice from '../images/جهاز فاكيم.png';
+import airMattress from '../images/جهاز فاكيم.png';
+import bloodPressure from '../images/جهاز قياس الضغط.webp';
+import glucoseMeter from '../images/جهاز قياس السكر.webp';
 
 const MedicalSupplies = () => {
   const supplies = [
@@ -10,44 +17,44 @@ const MedicalSupplies = () => {
       icon: 'fas fa-lungs',
       title: 'جهاز أكسجين',
       description: 'أجهزة أكسجين محمولة ومنزلية بأعلى جودة وأمان تام',
-      image: 'https://images.unsplash.com/photo-1584515933487-779824d29309?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
-      features: ['متاح 24 ساعة', 'صيانة دورية', 'تدريب على الاستخدام']
+      image: oxygenDevice,
+      features: ['متاح 24 ساعة', 'صيانة دورية', 'تدريب على الاستخدام'],
     },
     {
       icon: 'fas fa-wind',
       title: 'جهاز نوبليزر',
       description: 'أجهزة استنشاق حديثة لعلاج أمراض الجهاز التنفسي',
-      image: 'https://images.unsplash.com/photo-1559757148-5c350d0d3c56?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
-      features: ['سهل الاستخدام', 'فعال وآمن', 'متاح للأطفال والكبار']
+      image: nebulizer,
+      features: ['سهل الاستخدام', 'فعال وآمن', 'متاح للأطفال والكبار'],
     },
     {
       icon: 'fas fa-pump-medical',
       title: 'جهاز فاكيم',
       description: 'أجهزة شفط للإفرازات والسوائل طبيًا',
-      image: 'https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
-      features: ['قوة شفط عالية', 'هادئ التشغيل', 'سهل التنظيف']
+      image: vacuumDevice,
+      features: ['قوة شفط عالية', 'هادئ التشغيل', 'سهل التنظيف'],
     },
     {
       icon: 'fas fa-bed',
       title: 'مرتبة هوائية',
       description: 'مراتب هوائية طبية لمنع قرح الفراش للمرضى طريحي الفراش',
-      image: 'https://images.unsplash.com/photo-1584982751601-97dcc096659c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
-      features: ['تغيير ضغط تلقائي', 'مريحة وآمنة', 'سهلة التركيب']
+      image: airMattress,
+      features: ['تغيير ضغط تلقائي', 'مريحة وآمنة', 'سهلة التركيب'],
     },
     {
       icon: 'fas fa-heartbeat',
       title: 'جهاز قياس الضغط',
       description: 'أجهزة قياس ضغط الدم الرقمية الدقيقة',
-      image: 'https://images.unsplash.com/photo-1559757175-0eb30cd8c063?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
-      features: ['قراءات دقيقة', 'شاشة كبيرة واضحة', 'ذاكرة للقراءات']
+      image: bloodPressure,
+      features: ['قراءات دقيقة', 'شاشة كبيرة واضحة', 'ذاكرة للقراءات'],
     },
     {
       icon: 'fas fa-tint',
       title: 'جهاز قياس السكر',
       description: 'أجهزة قياس مستوى الجلوكوز في الدم',
-      image: 'https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
-      features: ['نتائج سريعة', 'استهلاك دم قليل', 'شرائح متوفرة']
-    }
+      image: glucoseMeter,
+      features: ['نتائج سريعة', 'استهلاك دم قليل', 'شرائح متوفرة'],
+    },
   ];
 
   return (
