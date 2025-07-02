@@ -5,40 +5,52 @@ import { Link } from 'react-router-dom';
 const Services = () => {
   const services = [
     {
+      icon: 'fas fa-user-md',
+      title: 'خدمة الكشف المنزلي',
+      description: 'استشاري باطني، علاج طبيعي، مخ وأعصاب، صدر، عظام - كشف في منزلك',
+      color: 'text-blue-600',
+      bgColor: 'bg-gradient-to-br from-blue-50 to-blue-100',
+      borderColor: 'border-blue-200'
+    },
+    {
       icon: 'fas fa-user-nurse',
       title: 'خدمات التمريض المنزلي',
       description: 'رعاية كبار السن، رعاية ما بعد العمليات، متابعة الضغط والسكر، زيارات تمريضية سريعة',
-      color: 'text-blue-500'
+      color: 'text-green-600',
+      bgColor: 'bg-gradient-to-br from-green-50 to-green-100',
+      borderColor: 'border-green-200'
     },
     {
       icon: 'fas fa-home',
       title: 'جلسات علاج منزلي',
       description: 'علاج طبيعي وجلسات تأهيل في راحة المنزل مع أحدث التقنيات',
-      color: 'text-purple-500'
-    },
-    {
-      icon: 'fas fa-user-md',
-      title: 'خدمة الكشف المنزلي',
-      description: 'استشاري باطني، علاج طبيعي، مخ وأعصاب، صدر، عظام - كشف في منزلك',
-      color: 'text-indigo-500'
+      color: 'text-purple-600',
+      bgColor: 'bg-gradient-to-br from-purple-50 to-purple-100',
+      borderColor: 'border-purple-200'
     },
     {
       icon: 'fas fa-vial',
       title: 'التحاليل الطبية',
       description: 'نقدم جميع التحاليل الطبية في المنزل مع النتائج السريعة والدقيقة',
-      color: 'text-teal-500'
+      color: 'text-teal-600',
+      bgColor: 'bg-gradient-to-br from-teal-50 to-teal-100',
+      borderColor: 'border-teal-200'
     },
     {
       icon: 'fas fa-x-ray',
       title: 'الأشعة في بيتك',
       description: 'أشعة عادية، سونار، دوبلر، إيكو القلب، رسم القلب والمخ، هولتر',
-      color: 'text-cyan-500'
+      color: 'text-cyan-600',
+      bgColor: 'bg-gradient-to-br from-cyan-50 to-cyan-100',
+      borderColor: 'border-cyan-200'
     },
     {
       icon: 'fas fa-stethoscope',
       title: 'المستلزمات الطبية',
       description: 'إيجار أجهزة طبية - أكسجين، نوبليزر، فاكيم، مرتبة هوائية وغيرها',
-      color: 'text-orange-500'
+      color: 'text-orange-600',
+      bgColor: 'bg-gradient-to-br from-orange-50 to-orange-100',
+      borderColor: 'border-orange-200'
     }
   ];
 
@@ -61,16 +73,16 @@ const Services = () => {
           {services.map((service, index) => (
             <div
               key={index}
-              className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 medical-card-hover border border-gray-100"
+              className={`${service.bgColor} p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 medical-card-hover border-2 ${service.borderColor}`}
             >
               <div className="text-center">
-                <div className="w-20 h-20 mx-auto mb-6 bg-gray-50 rounded-full flex items-center justify-center">
+                <div className="w-20 h-20 mx-auto mb-6 bg-white rounded-full flex items-center justify-center shadow-md">
                   <i className={`${service.icon} ${service.color} text-3xl`}></i>
                 </div>
                 <h3 className="text-xl font-bold text-gray-800 mb-4 arabic-text">
                   {service.title}
                 </h3>
-                <p className="text-gray-600 arabic-text leading-relaxed">
+                <p className="text-gray-700 arabic-text leading-relaxed">
                   {service.description}
                 </p>
               </div>
@@ -91,7 +103,7 @@ const Services = () => {
           </div>
 
           <div className="grid md:grid-cols-3 gap-8">
-            <div className="bg-gradient-to-br from-blue-50 to-blue-100 rounded-2xl p-8 text-center hover:shadow-xl transition-all duration-300 border border-blue-200">
+            <div className="bg-gradient-to-br from-blue-50 to-blue-100 rounded-2xl p-8 text-center hover:shadow-xl transition-all duration-300 border-2 border-blue-200">
               <div className="w-20 h-20 mx-auto mb-6 bg-white rounded-full flex items-center justify-center shadow-lg">
                 <i className="fas fa-stethoscope text-blue-600 text-3xl"></i>
               </div>
@@ -109,7 +121,7 @@ const Services = () => {
               </a>
             </div>
             
-            <div className="bg-gradient-to-br from-green-50 to-green-100 rounded-2xl p-8 text-center hover:shadow-xl transition-all duration-300 border border-green-200">
+            <div className="bg-gradient-to-br from-green-50 to-green-100 rounded-2xl p-8 text-center hover:shadow-xl transition-all duration-300 border-2 border-green-200">
               <div className="w-20 h-20 mx-auto mb-6 bg-white rounded-full flex items-center justify-center shadow-lg">
                 <i className="fas fa-boxes text-green-600 text-3xl"></i>
               </div>
@@ -127,7 +139,7 @@ const Services = () => {
               </a>
             </div>
             
-            <div className="bg-gradient-to-br from-purple-50 to-purple-100 rounded-2xl p-8 text-center hover:shadow-xl transition-all duration-300 border border-purple-200">
+            <div className="bg-gradient-to-br from-purple-50 to-purple-100 rounded-2xl p-8 text-center hover:shadow-xl transition-all duration-300 border-2 border-purple-200">
               <div className="w-20 h-20 mx-auto mb-6 bg-white rounded-full flex items-center justify-center shadow-lg">
                 <i className="fas fa-users text-purple-600 text-3xl"></i>
               </div>
