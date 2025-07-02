@@ -4,37 +4,54 @@ import Header from '../components/Header';
 import Footer from '../components/Footer';
 import FloatingContacts from '../components/FloatingContacts';
 
+
+// استيراد الصور من مجلد src/images
+import internalMedicine from '../images/استشاري باطني.jpg';
+import physiotherapy from '../images/علاج طبيعي.jpg';
+import neurology from '../images/مخ وأعصاب.jpg';
+import chest from '../images/دكتور امراض الصدر.jpg';
+import orthopedics from '../images/دكتور عظام.jpg';
+import xray from '../images/أشعة عادية ديجيتال.jpg';
+import ultrasound from '../images/السونار.png';
+import doppler from '../images/دوبلر الأوردة والشرايين.jpg';
+import echo from '../images/الإيكو على القلب.jpg';
+import ecg from '../images/رسم القلب.jpg';
+import eeg from '../images/رسم المخ.jpg';
+import nerve from '../images/رسم العصب والعضلات.webp';
+import holter from '../images/جهاز الهولتر.jpg';
+
+
 const MedicalServices = () => {
   const consultationServices = [
     {
       icon: 'fas fa-stethoscope',
       title: 'استشاري باطني',
       description: 'كشف وتشخيص أمراض الباطنة والجهاز الهضمي في منزلك',
-      image: 'https://images.unsplash.com/photo-1559757148-5c350d0d3c56?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'
+      image: internalMedicine,
     },
     {
       icon: 'fas fa-user-injured',
       title: 'علاج طبيعي',
       description: 'جلسات علاج طبيعي وإعادة تأهيل في راحة منزلك',
-      image: 'https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'
+      image: physiotherapy,
     },
     {
       icon: 'fas fa-brain',
       title: 'مخ وأعصاب',
       description: 'استشاري مخ وأعصاب لعلاج اضطرابات الجهاز العصبي',
-      image: 'https://images.unsplash.com/photo-1559757175-0eb30cd8c063?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'
+      image: neurology,
     },
     {
       icon: 'fas fa-lungs',
       title: 'صدر',
       description: 'استشاري أمراض الصدر والجهاز التنفسي',
-      image: 'https://images.unsplash.com/photo-1584982751601-97dcc096659c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'
+      image: chest,
     },
     {
       icon: 'fas fa-bone',
       title: 'عظام',
       description: 'استشاري جراحة العظام وعلاج إصابات المفاصل',
-      image: 'https://images.unsplash.com/photo-1559757175-0eb30cd8c063?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'
+      image: orthopedics,
     }
   ];
 
@@ -43,49 +60,49 @@ const MedicalServices = () => {
       icon: 'fas fa-x-ray',
       title: 'أشعة عادية ديجيتال',
       description: 'أشعة على جميع أجزاء الجسم - للكسور ومتابعة العمليات وأشعة الصدر',
-      image: 'https://images.unsplash.com/photo-1559757148-5c350d0d3c56?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'
+      image: xray,
     },
     {
       icon: 'fas fa-baby',
       title: 'السونار',
       description: 'أشعة السونار على البطن والحوض في المنزل',
-      image: 'https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'
+      image: ultrasound,
     },
     {
       icon: 'fas fa-heartbeat',
       title: 'دوبلر الأوردة والشرايين',
       description: 'فحص الدوبلر على الأوردة والشرايين في المنزل',
-      image: 'https://images.unsplash.com/photo-1559757175-0eb30cd8c063?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'
+      image: doppler,
     },
     {
       icon: 'fas fa-heart',
       title: 'الإيكو على القلب',
       description: 'فحص الإيكو على القلب في المنزل مع التقرير الفوري',
-      image: 'https://images.unsplash.com/photo-1584515933487-779824d29309?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'
+      image: echo,
     },
     {
       icon: 'fas fa-chart-line',
       title: 'رسم القلب',
       description: 'رسم القلب الكهربائي في المنزل',
-      image: 'https://images.unsplash.com/photo-1559757148-5c350d0d3c56?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'
+      image: ecg,
     },
     {
       icon: 'fas fa-brain',
       title: 'رسم المخ',
       description: 'رسم المخ للأطفال والكبار في المنزل',
-      image: 'https://images.unsplash.com/photo-1559757175-0eb30cd8c063?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'
+      image: eeg,
     },
     {
       icon: 'fas fa-dumbbell',
       title: 'رسم العصب والعضلات',
       description: 'فحص رسم العصب والعضلات في المنزل',
-      image: 'https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'
+      image: nerve,
     },
     {
       icon: 'fas fa-clock',
       title: 'جهاز الهولتر',
       description: 'جهاز الهولتر الخاص بالقلب - 24 ساعة و 48 ساعة',
-      image: 'https://images.unsplash.com/photo-1584515933487-779824d29309?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'
+      image: holter,
     }
   ];
 
