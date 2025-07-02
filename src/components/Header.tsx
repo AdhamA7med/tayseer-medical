@@ -1,10 +1,12 @@
 
 import React, { useState } from 'react';
 import { Menu, X } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate, useLocation } from 'react-router-dom';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const navigate = useNavigate();
+  const location = useLocation();
 
   const menuItems = [
     { name: 'الرئيسية', href: '/' },
@@ -16,6 +18,20 @@ const Header = () => {
 
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
+  const handleContactClick = (e: React.MouseEvent) => {
+    e.preventDefault();
+    if (location.pathname === '/') {
+      // إذا كنا في الصفحة الرئيسية، انتقل مباشرة لقسم الاتصال
+      document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
+    } else {
+      // إذا كنا في صفحة أخرى، انتقل للصفحة الرئيسية ثم لقسم الاتصال
+      navigate('/', { replace: true });
+      setTimeout(() => {
+        document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
+      }, 100);
+    }
   };
 
   return (
@@ -36,7 +52,15 @@ const Header = () => {
           {/* Desktop Navigation */}
           <nav className="hidden md:flex space-x-8 space-x-reverse">
             {menuItems.map((item) => (
-              item.href.startsWith('/') ? (
+              item.href === '#contact' ? (
+                <button
+                  key={item.name}
+                  onClick={handleContactClick}
+                  className="text-gray-700 hover:text-blue-600 transition-colors duration-300 font-medium arabic-text"
+                >
+                  {item.name}
+                </button>
+              ) : item.href.startsWith('/') ? (
                 <Link
                   key={item.name}
                   to={item.href}
@@ -82,7 +106,18 @@ const Header = () => {
           <div className="md:hidden py-4 border-t border-gray-200">
             <nav className="flex flex-col space-y-3">
               {menuItems.map((item) => (
-                item.href.startsWith('/') ? (
+                item.href === '#contact' ? (
+                  <button
+                    key={item.name}
+                    onClick={(e) => {
+                      handleContactClick(e);
+                      setIsMenuOpen(false);
+                    }}
+                    className="text-gray-700 hover:text-blue-600 transition-colors duration-300 font-medium arabic-text py-2 text-right"
+                  >
+                    {item.name}
+                  </button>
+                ) : item.href.startsWith('/') ? (
                   <Link
                     key={item.name}
                     to={item.href}

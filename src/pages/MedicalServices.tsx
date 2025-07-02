@@ -1,5 +1,5 @@
-
 import React from 'react';
+import { Helmet } from 'react-helmet-async';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import FloatingContacts from '../components/FloatingContacts';
@@ -108,6 +108,16 @@ const MedicalServices = () => {
 
   return (
     <div className="min-h-screen bg-gray-50">
+      <Helmet>
+        <title>الخدمات الطبية المنزلية - التيسير ميديكال | أطباء وأشعة في المنزل</title>
+        <meta name="description" content="خدمات طبية منزلية متكاملة: استشاريين في جميع التخصصات، أشعة منزلية، تحاليل طبية، رسم قلب ومخ، سونار وإيكو في المنزل. اتصل الآن 01006227863" />
+        <meta name="keywords" content="استشاري منزلي, أشعة منزلية, سونار منزلي, إيكو منزلي, رسم قلب منزلي, رسم مخ منزلي, دوبلر منزلي, هولتر منزلي, تحاليل طبية منزلية, استشاري باطني منزلي, علاج طبيعي منزلي, استشاري مخ وأعصاب منزلي, استشاري صدر منزلي, استشاري عظام منزلي" />
+        <link rel="canonical" href="https://tayseermedical.com/medical-services" />
+        <meta property="og:title" content="الخدمات الطبية المنزلية - التيسير ميديكال" />
+        <meta property="og:description" content="خدمات طبية منزلية متكاملة: استشاريين في جميع التخصصات، أشعة منزلية، تحاليل طبية في المنزل" />
+        <meta property="og:url" content="https://tayseermedical.com/medical-services" />
+      </Helmet>
+      
       <Header />
       
       {/* Hero Section */}
