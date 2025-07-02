@@ -52,7 +52,9 @@ const Footer = () => {
                 <i className="fas fa-phone"></i>
               </a>
               <a
-                href="#"
+                href="https://www.facebook.com/profile.php?id=100094318966608"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="w-10 h-10 bg-blue-600 hover:bg-blue-700 rounded-full flex items-center justify-center transition-colors duration-300"
               >
                 <i className="fab fa-facebook-f"></i>

@@ -179,18 +179,18 @@ const Employment = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
-                href="https://wa.me/01145188254"
+                href="https://wa.me/01080413287"
                 className="bg-white text-blue-600 px-8 py-3 rounded-full font-semibold hover:bg-gray-100 transition-all duration-300 flex items-center justify-center space-x-2 space-x-reverse"
               >
                 <i className="fab fa-whatsapp text-green-500"></i>
-                <span>تقديم عبر واتساب: 01145188254</span>
+                <span>تقديم عبر واتساب: 01080413287</span>
               </a>
               <a
-                href="tel:01006227863"
+                href="tel:01080413287"
                 className="bg-red-500 hover:bg-red-600 text-white px-8 py-3 rounded-full font-semibold transition-all duration-300 flex items-center justify-center space-x-2 space-x-reverse pulse-medical"
               >
                 <i className="fas fa-phone"></i>
-                <span>اتصال: 01006227863</span>
+                <span>اتصال: 01080413287</span>
               </a>
             </div>
           </div>

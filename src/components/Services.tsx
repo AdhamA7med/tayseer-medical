@@ -5,16 +5,10 @@ import { Link } from 'react-router-dom';
 const Services = () => {
   const services = [
     {
-      icon: 'fas fa-user-injured',
-      title: 'رعاية كبار السن',
-      description: 'رعاية شاملة لكبار السن في بيئة مألوفة وآمنة مع متابعة طبية دقيقة',
+      icon: 'fas fa-user-nurse',
+      title: 'خدمات التمريض المنزلي',
+      description: 'رعاية كبار السن، رعاية ما بعد العمليات، متابعة الضغط والسكر، زيارات تمريضية سريعة',
       color: 'text-blue-500'
-    },
-    {
-      icon: 'fas fa-procedures',
-      title: 'رعاية ما بعد العمليات',
-      description: 'متابعة طبية متخصصة بعد العمليات الجراحية وإعادة التأهيل',
-      color: 'text-green-500'
     },
     {
       icon: 'fas fa-home',
@@ -45,18 +39,6 @@ const Services = () => {
       title: 'المستلزمات الطبية',
       description: 'إيجار أجهزة طبية - أكسجين، نوبليزر، فاكيم، مرتبة هوائية وغيرها',
       color: 'text-orange-500'
-    },
-    {
-      icon: 'fas fa-ambulance',
-      title: 'زيارات تمريض سريعة',
-      description: 'خدمات تمريض عاجلة تصل إليك خلال 30 دقيقة أو أقل',
-      color: 'text-red-500'
-    },
-    {
-      icon: 'fas fa-heartbeat',
-      title: 'متابعة الضغط والسكر',
-      description: 'مراقبة مستمرة للعلامات الحيوية وضبط جرعات الأدوية',
-      color: 'text-pink-500'
     }
   ];
 
@@ -117,13 +99,14 @@ const Services = () => {
               <p className="text-gray-700 arabic-text mb-6 leading-relaxed">
                 استشاريون متخصصون في جميع التخصصات يأتون إليك في المنزل مع أحدث أجهزة الأشعة والتحاليل
               </p>
-              <Link
-                to="/medical-services"
+              <a
+                href="/medical-services"
+                onClick={() => window.scrollTo(0, 0)}
                 className="inline-flex items-center bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-full font-semibold transition-all duration-300 space-x-2 space-x-reverse"
               >
                 <span>تفاصيل الخدمات الطبية</span>
                 <i className="fas fa-arrow-left"></i>
-              </Link>
+              </a>
             </div>
             
             <div className="bg-gradient-to-br from-green-50 to-green-100 rounded-2xl p-8 text-center hover:shadow-xl transition-all duration-300 border border-green-200">
@@ -134,13 +117,14 @@ const Services = () => {
               <p className="text-gray-700 arabic-text mb-6 leading-relaxed">
                 إيجار الأجهزة الطبية بأفضل الأسعار مع الصيانة والدعم الفني المستمر
               </p>
-              <Link
-                to="/medical-supplies"
+              <a
+                href="/medical-supplies"
+                onClick={() => window.scrollTo(0, 0)}
                 className="inline-flex items-center bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-full font-semibold transition-all duration-300 space-x-2 space-x-reverse"
               >
                 <span>تفاصيل المستلزمات</span>
                 <i className="fas fa-arrow-left"></i>
-              </Link>
+              </a>
             </div>
             
             <div className="bg-gradient-to-br from-purple-50 to-purple-100 rounded-2xl p-8 text-center hover:shadow-xl transition-all duration-300 border border-purple-200">
@@ -151,13 +135,14 @@ const Services = () => {
               <p className="text-gray-700 arabic-text mb-6 leading-relaxed">
                 انضم لفريقنا الطبي المحترف واحصل على فرصة عمل مميزة في مجال الرعاية الصحية
               </p>
-              <Link
-                to="/employment"
+              <a
+                href="/employment"
+                onClick={() => window.scrollTo(0, 0)}
                 className="inline-flex items-center bg-purple-600 hover:bg-purple-700 text-white px-6 py-3 rounded-full font-semibold transition-all duration-300 space-x-2 space-x-reverse"
               >
                 <span>فرص التوظيف</span>
                 <i className="fas fa-arrow-left"></i>
-              </Link>
+              </a>
             </div>
           </div>
         </div>
