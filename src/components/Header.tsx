@@ -1,18 +1,22 @@
 
 import React, { useState } from 'react';
 import { Menu, X } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const menuItems = [
-    { name: 'الرئيسية', href: '#home' },
-    { name: 'خدماتنا', href: '#services' },
-    { name: 'عن التيسير', href: '#about' },
-    { name: 'المناطق', href: '#areas' },
-    { name: 'آراء العملاء', href: '#testimonials' },
+    { name: 'الرئيسية', href: '/' },
+    { name: 'الخدمات الطبية', href: '/medical-services' },
+    { name: 'المستلزمات الطبية', href: '/medical-supplies' },
+    { name: 'التوظيف', href: '/employment' },
     { name: 'اتصل بنا', href: '#contact' },
   ];
+
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
 
   return (
     <header className="bg-white shadow-lg fixed top-0 right-0 left-0 z-50">
@@ -32,13 +36,24 @@ const Header = () => {
           {/* Desktop Navigation */}
           <nav className="hidden md:flex space-x-8 space-x-reverse">
             {menuItems.map((item) => (
-              <a
-                key={item.name}
-                href={item.href}
-                className="text-gray-700 hover:text-blue-600 transition-colors duration-300 font-medium arabic-text"
-              >
-                {item.name}
-              </a>
+              item.href.startsWith('/') ? (
+                <Link
+                  key={item.name}
+                  to={item.href}
+                  onClick={scrollToTop}
+                  className="text-gray-700 hover:text-blue-600 transition-colors duration-300 font-medium arabic-text"
+                >
+                  {item.name}
+                </Link>
+              ) : (
+                <a
+                  key={item.name}
+                  href={item.href}
+                  className="text-gray-700 hover:text-blue-600 transition-colors duration-300 font-medium arabic-text"
+                >
+                  {item.name}
+                </a>
+              )
             ))}
           </nav>
 
@@ -67,14 +82,28 @@ const Header = () => {
           <div className="md:hidden py-4 border-t border-gray-200">
             <nav className="flex flex-col space-y-3">
               {menuItems.map((item) => (
-                <a
-                  key={item.name}
-                  href={item.href}
-                  onClick={() => setIsMenuOpen(false)}
-                  className="text-gray-700 hover:text-blue-600 transition-colors duration-300 font-medium arabic-text py-2"
-                >
-                  {item.name}
-                </a>
+                item.href.startsWith('/') ? (
+                  <Link
+                    key={item.name}
+                    to={item.href}
+                    onClick={() => {
+                      setIsMenuOpen(false);
+                      scrollToTop();
+                    }}
+                    className="text-gray-700 hover:text-blue-600 transition-colors duration-300 font-medium arabic-text py-2"
+                  >
+                    {item.name}
+                  </Link>
+                ) : (
+                  <a
+                    key={item.name}
+                    href={item.href}
+                    onClick={() => setIsMenuOpen(false)}
+                    className="text-gray-700 hover:text-blue-600 transition-colors duration-300 font-medium arabic-text py-2"
+                  >
+                    {item.name}
+                  </a>
+                )
               ))}
               <a
                 href="tel:01006227863"
