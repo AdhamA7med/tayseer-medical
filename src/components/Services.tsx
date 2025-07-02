@@ -1,5 +1,6 @@
 
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Services = () => {
   const services = [
@@ -22,6 +23,24 @@ const Services = () => {
       color: 'text-purple-500'
     },
     {
+      icon: 'fas fa-user-md',
+      title: 'خدمة الكشف المنزلي',
+      description: 'استشاري باطني، علاج طبيعي، مخ وأعصاب، صدر، عظام - كشف في منزلك',
+      color: 'text-indigo-500'
+    },
+    {
+      icon: 'fas fa-x-ray',
+      title: 'الأشعة في بيتك',
+      description: 'مركز أشعة متنقل بأحدث الأجهزة - أشعة عادية، سونار، دوبلر، إيكو القلب',
+      color: 'text-cyan-500'
+    },
+    {
+      icon: 'fas fa-stethoscope',
+      title: 'المستلزمات الطبية',
+      description: 'إيجار أجهزة طبية - أكسجين، نوبليزر، فاكيم، مرتبة هوائية وغيرها',
+      color: 'text-orange-500'
+    },
+    {
       icon: 'fas fa-ambulance',
       title: 'زيارات تمريض سريعة',
       description: 'خدمات تمريض عاجلة تصل إليك خلال 30 دقيقة أو أقل',
@@ -31,7 +50,7 @@ const Services = () => {
       icon: 'fas fa-heartbeat',
       title: 'متابعة الضغط والسكر',
       description: 'مراقبة مستمرة للعلامات الحيوية وضبط جرعات الأدوية',
-      color: 'text-orange-500'
+      color: 'text-pink-500'
     },
     {
       icon: 'fas fa-syringe',
@@ -77,9 +96,44 @@ const Services = () => {
           ))}
         </div>
 
-        {/* CTA Section */}
+        {/* Service Pages Links */}
         <div className="mt-16 text-center">
-          <div className="bg-gradient-to-r from-blue-500 to-green-500 rounded-2xl p-8 text-white">
+          <h3 className="text-2xl font-bold text-gray-800 mb-8 arabic-text">
+            تفاصيل أكثر عن خدماتنا
+          </h3>
+          <div className="grid md:grid-cols-3 gap-6">
+            <Link
+              to="/medical-services"
+              className="bg-gradient-to-r from-blue-500 to-blue-600 text-white p-6 rounded-xl hover:shadow-lg transition-all duration-300"
+            >
+              <i className="fas fa-stethoscope text-3xl mb-4"></i>
+              <h4 className="text-xl font-bold mb-2">الخدمات الطبية</h4>
+              <p className="text-sm">جميع خدماتنا الطبية المتخصصة</p>
+            </Link>
+            
+            <Link
+              to="/medical-supplies"
+              className="bg-gradient-to-r from-green-500 to-green-600 text-white p-6 rounded-xl hover:shadow-lg transition-all duration-300"
+            >
+              <i className="fas fa-boxes text-3xl mb-4"></i>
+              <h4 className="text-xl font-bold mb-2">المستلزمات الطبية</h4>
+              <p className="text-sm">إيجار الأجهزة الطبية</p>
+            </Link>
+            
+            <Link
+              to="/employment"
+              className="bg-gradient-to-r from-purple-500 to-purple-600 text-white p-6 rounded-xl hover:shadow-lg transition-all duration-300"
+            >
+              <i className="fas fa-users text-3xl mb-4"></i>
+              <h4 className="text-xl font-bold mb-2">التوظيف</h4>
+              <p className="text-sm">انضم لفريقنا الطبي</p>
+            </Link>
+          </div>
+        </div>
+
+        {/* CTA Section */}
+        <div className="mt-16">
+          <div className="bg-gradient-to-r from-blue-500 to-green-500 rounded-2xl p-8 text-white text-center">
             <h3 className="text-2xl md:text-3xl font-bold mb-4 arabic-text">
               هل تحتاج خدمة طارئة؟
             </h3>
